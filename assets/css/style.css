@@ -1,55 +1,11 @@
+/* Кастомные стили для проекта */
 
-.hero {
-    margin-top: 70px; 
-}
-
-.hero-image-container {
-    position: relative;
-}
-
-.arrows {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    transform: translateY(-50%);
-}
-
-.arrow {
-    background: rgba(255, 255, 255, 0.3);
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.arrow:hover {
-    background: rgba(255, 255, 255, 0.6);
-}
-
-.mt-2 {
-    margin-top: 1rem;
-}
-
-.icon {
-    font-size: 1.2rem;
-}
-
-.ml-2 {
-    margin-left: 1rem;
-}
-
+/* Отступы для фиксированного хедера */
 body {
     padding-top: 70px;
 }
 
-
+/* Стили для контактов */
 .contact-item {
     padding: 15px;
     background: #f8f9fa;
@@ -62,7 +18,7 @@ body {
     transform: translateX(5px);
 }
 
-
+/* Социальные сети */
 .social-links .button {
     transition: all 0.3s;
 }
@@ -72,13 +28,13 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-
+/* Активное состояние меню */
 .navbar-item.is-active {
     background-color: #f5f5f5;
     font-weight: 600;
 }
 
-
+/* Отступы */
 .mt-2 { margin-top: 1rem; }
 .mt-3 { margin-top: 1.5rem; }
 .mt-4 { margin-top: 2rem; }
@@ -90,8 +46,9 @@ body {
 .mb-6 { margin-bottom: 4rem; }
 .mr-2 { margin-right: 1rem; }
 .mr-3 { margin-right: 1.5rem; }
+.ml-2 { margin-left: 1rem; }
 
-
+/* Стили для сообщений */
 .message-header {
     cursor: pointer;
     transition: background-color 0.3s;
@@ -101,12 +58,13 @@ body {
     background-color: #0096d6 !important;
 }
 
-
+/* Стили для форм */
 .box {
     padding: 2rem;
     border-radius: 10px;
 }
 
+/* Анимация для кнопок */
 .button {
     transition: all 0.3s;
 }
@@ -114,4 +72,40 @@ body {
 .button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Стили для иконок */
+.icon {
+    font-size: 1.2rem;
+}
+
+/* Стили для футера */
+.footer {
+    margin-top: 4rem;
+    padding: 3rem 1.5rem 3rem;
+}
+
+/* Стили для карточек */
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Стили для герой-секции */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Стили для заголовков */
+.title {
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #666;
 }

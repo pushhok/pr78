@@ -4,37 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сервис аренды</title>
+    
+    <!-- Подключаем Bulma CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    
+    <!-- Подключаем Font Awesome для иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     
+    <!-- Подключаем кастомные стили -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
+    <!-- Хедер с навигацией -->
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="index.html">
-                    <img src="assets/images/logo.png" alt="Логотип">
+                    <strong>Сервис аренды</strong>
                 </a>
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
-…        </a>
+                </a>
             </div>
+            
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item is-active" href="index.html">Главная</a>
-                    <a class="navbar-item" href="contacts.html">Контакты</a>
-                    <a class="navbar-item" href="faq.html">FAQ</a>
+                    <a class="navbar-item is-active" href="index.html">
+                        Главная
+                    </a>
+                    <a class="navbar-item" href="contacts.html">
+                        Контакты
+                    </a>
+                    <a class="navbar-item" href="faq.html">
+                        FAQ
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
-    
 
-    <section class="hero is-primary is-medium" id="rent">
+    <!-- Герой-секция с информацией -->
+    <section class="hero is-primary is-medium" id="rent" style="margin-top: 70px;">
         <div class="hero-body">
             <div class="container">
                 <div class="columns">
@@ -43,43 +56,35 @@
                         <p class="subtitle is-4">Надежный сервис аренды оборудования для вашего проекта. 
                         Быстрая доставка, гибкие тарифы и забота о клиентах - вот что мы ценим больше всего.</p>
                         <div class="buttons">
-                            <a class="button is-large is-light" href="#catalog">
+                            <a class="button is-large is-primary" href="#catalog">
                                 Посмотреть каталог
                             </a>
-                            <a class="button is-large is-light" href="#contact">
+                            <a class="button is-large is-light" href="#reviews">
                                 Связаться с нами
                             </a>
                         </div>
                     </div>
                     <div class="column is-6">
-                        <div class="hero-image-container">
-                            <figure class="image">
-                                <img src="assets/images/hero.jpg" alt="Фото товаров">
-                            </figure>
-                            <div class="arrows">
-                                <button class="arrow left">
-                                    <i class="fas fa-chevron-left"></i>
-                                </button>
-                                <button class="arrow right">
-                                    <i class="fas fa-chevron-right"></i>
-                                </button>
-                            </div>
-                        </div>
+                        <figure class="image is-4by3">
+                            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Фото товаров">
+                        </figure>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Каталог товаров -->
     <section class="section" id="catalog">
         <div class="container">
             <h2 class="title is-2 has-text-centered">Каталог</h2>
             <div class="columns is-multiline">
+                <!-- Карточка 1 -->
                 <div class="column is-4">
                     <div class="card">
                         <div class="card-image">
                             <figure class="image is-4by3">
-                                <img src="assets/images/product1.jpg" alt="Товар 1">
+                                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Товар 1">
                             </figure>
                         </div>
                         <div class="card-content">
@@ -92,11 +97,12 @@
                     </div>
                 </div>
                 
+                <!-- Карточка 2 -->
                 <div class="column is-4">
                     <div class="card">
                         <div class="card-image">
                             <figure class="image is-4by3">
-                                <img src="assets/images/product2.jpg" alt="Товар 2">
+                                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Товар 2">
                             </figure>
                         </div>
                         <div class="card-content">
@@ -109,11 +115,12 @@
                     </div>
                 </div>
                 
+                <!-- Карточка 3 -->
                 <div class="column is-4">
                     <div class="card">
                         <div class="card-image">
                             <figure class="image is-4by3">
-                                <img src="assets/images/product3.jpg" alt="Товар 3">
+                                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Товар 3">
                             </figure>
                         </div>
                         <div class="card-content">
@@ -129,6 +136,7 @@
         </div>
     </section>
 
+    <!-- Отзывы -->
     <section class="section" id="reviews">
         <div class="container">
             <h2 class="title is-2 has-text-centered">Отзывы</h2>
@@ -175,6 +183,7 @@
         </div>
     </section>
 
+    <!-- Футер -->
     <footer class="footer">
         <div class="container">
             <div class="columns">
@@ -202,8 +211,10 @@
         </div>
     </footer>
 
+    <!-- Подключаем скрипт для бургер-меню -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Бургер-меню
             const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
             if ($navbarBurgers.length > 0) {
                 $navbarBurgers.forEach(el => {
