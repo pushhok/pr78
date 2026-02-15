@@ -1,0 +1,46 @@
+
+.hero {
+    margin-top: 70px; 
+}
+
+.hero-image-container {
+    position: relative;
+}
+
+.arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    transform: translateY(-50%);
+}
+
+.arrow {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.arrow:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}
+
+.icon {
+    font-size: 1.2rem;
+}
+
+.ml-2 {
+    margin-left: 1rem;
+}

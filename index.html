@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервис аренды</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <img src="assets/images/logo.png" alt="Логотип" width="112" height="28">
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item is-active" href="#rent">
+                        Прокат
+                    </a>
+                    <a class="navbar-item" href="#about">
+                        О нас
+                    </a>
+                    <a class="navbar-item" href="#contact">
+                        Контакты
+                    </a>
+                    <a class="navbar-item" href="#reviews">
+                        Отзывы
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="hero is-primary is-medium" id="rent">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-6">
+                        <h1 class="title is-1">Краткая информация о сервисе аренды</h1>
+                        <p class="subtitle is-4">Надежный сервис аренды оборудования для вашего проекта. 
+                        Быстрая доставка, гибкие тарифы и забота о клиентах - вот что мы ценим больше всего.</p>
+                        <div class="buttons">
+                            <a class="button is-large is-primary" href="#catalog">
+                                Посмотреть каталог
+                            </a>
+                            <a class="button is-large is-light" href="#contact">
+                                Связаться с нами
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="hero-image-container">
+                            <figure class="image">
+                                <img src="assets/images/hero.jpg" alt="Фото товаров">
+                            </figure>
+                            <div class="arrows">
+                                <button class="arrow left">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="arrow right">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="catalog">
+        <div class="container">
+            <h2 class="title is-2 has-text-centered">Каталог</h2>
+            <div class="columns is-multiline">
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="assets/images/product1.jpg" alt="Товар 1">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <h3 class="title is-4">Профессиональная видеокамера</h3>
+                                <p>Высококачественная съемка в 4K разрешении. Идеально для фильмов и мероприятий.</p>
+                                <button class="button is-primary is-fullwidth is-large mt-2">Арендовать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="assets/images/product2.jpg" alt="Товар 2">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <h3 class="title is-4">Профессиональный дрон</h3>
+                                <p>Стабильный полет и высококачественная съемка с воздуха. Долет до 10 км.</p>
+                                <button class="button is-primary is-fullwidth is-large mt-2">Арендовать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="assets/images/product3.jpg" alt="Товар 3">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <h3 class="title is-4">Световое оборудование</h3>
+                                <p>Профессиональные прожекторы и софиты для качественной съемки в любых условиях.</p>
+                                <button class="button is-primary is-fullwidth is-large mt-2">Арендовать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <section class="section" id="reviews">
+        <div class="container">
+            <h2 class="title is-2 has-text-centered">Отзывы</h2>
+            <div class="columns is-multiline">
+                <div class="column is-6">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="has-text-grey">"Отличный сервис! Арендовали оборудование для свадьбы, все прошло идеально. 
+                            Быстрая доставка и качественное оборудование. Рекомендую!"</p>
+                            <footer class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <img src="https://i.pravatar.cc/150?img=1" class="is-rounded" alt="Анна">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-5">Анна Петрова</p>
+                                    <p class="subtitle is-6">Фотограф</p>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="has-text-grey">"Пользовался сервисом для съемки корпоративного мероприятия. 
+                            Все оборудование было в идеальном состоянии, поддержка на высоте. Спасибо за отличный сервис!"</p>
+                            <footer class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <img src="https://i.pravatar.cc/150?img=2" class="is-rounded" alt="Дмитрий">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-5">Дмитрий Иванов</p>
+                                    <p class="subtitle is-6">Организатор мероприятий</p>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-6">
+                    <h3 class="title is-4">Сервис аренды</h3>
+                    <p>Надежный сервис аренды профессионального оборудования для любых проектов</p>
+                </div>
+                <div class="column is-6 has-text-right">
+                    <h3 class="title is-4">Контакты</h3>
+                    <p>г. Москва, ул. Ленина, д. 15</p>
+                    <p>Тел: +7 (495) 123-45-67</p>
+                    <p>Email: info@rentservice.ru</p>
+                    <div class="mt-3">
+                        <a class="icon" href="#"><i class="fab fa-facebook"></i></a>
+                        <a class="icon ml-2" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="icon ml-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="icon ml-2" href="#"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <div class="has-text-centered">
+                <p>© 2026 Сервис аренды. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
