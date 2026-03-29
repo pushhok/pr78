@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическое 12 | Обработка событий</title>
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        /* Стили для заданий */
+        .task-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+        
+        /* Задание 3: Тёмная тема */
+        body.dark-theme {
+            background-color: #1a1a2e !important;
+            color: #ffffff !important;
+        }
+        body.dark-theme .box,
+        body.dark-theme .task-section {
+            background-color: #16213e !important;
+            color: #ffffff !important;
+        }
+        body.dark-theme .title,
+        body.dark-theme .subtitle {
+            color: #ffffff !important;
+        }
+        
+        /* Задание 5: Квадрат */
+        #size-box {
+            width: 100px;
+            height: 100px;
+            background-color: #3273dc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 20px auto;
+        }
+        
+        /* Задание 4: Список дел */
+        #todo-list li {
+            padding: 10px;
+            margin: 5px 0;
+            background: #fff;
+            border-left: 4px solid #3273dc;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar is-light" role="navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <strong>Сервис аренды</strong>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="index.html">Главная</a>
+                    <a class="navbar-item" href="contacts.html">Контакты</a>
+                    <a class="navbar-item" href="faq.html">FAQ</a>
+                    <a class="navbar-item is-active" href="events-practice.html">Практика 12</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="section">
+        <div class="container">
+            <h1 class="title has-text-centered mb-6">Практическое занятие 12: Обработка событий</h1>
+
+            <!-- ==================== ЗАДАНИЕ 1 ==================== -->
+            <section class="task-section">
+                <h2 class="title is-3">Задание №1: Счётчик кликов</h2>
+                <div class="box has-text-centered">
+                    <p class="subtitle">Кликов: <span id="click-count" class="tag is-primary is-medium">0</span></p>
+                    <button id="click-btn" class="button is-primary">
+                        <span class="icon"><i class="fas fa-mouse-pointer"></i></span>
+                        <span>Кликни меня!</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- ==================== ЗАДАНИЕ 2 ==================== -->
+            <section class="task-section">
+                <h2 class="title is-3">Задание №2: Приветствие</h2>
+                <div class="box">
+                    <div class="field">
+                        <label class="label">Введите ваше имя:</label>
+                        <div class="control has-icons-left">
+                            <input class="input" type="text" id="name-input" placeholder="Как вас зовут?">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <button id="greet-btn" class="button is-info">
+                        <span class="icon"><i class="fas fa-comment"></i></span>
+                        <span>Привет!</span>
+                    </button>
+                    <div id="greet-output" class="notification is-success is-light mt-4" style="display: none;"></div>
+                </div>
+            </section>
+
+            <!-- ==================== ЗАДАНИЕ 3 ==================== -->
+            <section class="task-section">
+                <h2 class="title is-3">Задание №3: Переключатель темы</h2>
+                <div class="box has-text-centered">
+                    <button id="theme-btn" class="button is-dark">
+                        <span class="icon"><i class="fas fa-moon"></i></span>
+                        <span>Сменить тему</span>
+                    </button>
+                    <p class="help mt-2">Нажмите для переключения тёмной/светлой темы</p>
+                </div>
+            </section>
+
+            <!-- ==================== ЗАДАНИЕ 4 ==================== -->
+            <section class="task-section">
+                <h2 class="title is-3">Задание №4: Список дел</h2>
+                <div class="box">
+                    <div class="field has-addons">
+                        <div class="control is-expanded">
+                            <input class="input" type="text" id="todo-input" placeholder="Что нужно сделать?">
+                        </div>
+                        <div class="control">
+                            <button id="add-todo-btn" class="button is-primary">
+                                <span class="icon"><i class="fas fa-plus"></i></span>
+                                <span>Добавить</span>
+                            </button>
+                        </div>
+                    </div>
+                    <ul id="todo-list" class="mt-4"></ul>
+                </div>
+            </section>
+
+            <!-- ==================== ЗАДАНИЕ 5 ==================== -->
+            <section class="task-section">
+                <h2 class="title is-3">Задание №5: Управление размером</h2>
+                <div class="box has-text-centered">
+                    <div id="size-box">100px</div>
+                    <div class="field is-grouped is-grouped-centered mt-4">
+                        <div class="control">
+                            <button id="size-minus" class="button is-danger">
+                                <span class="icon"><i class="fas fa-minus"></i></span>
+                            </button>
+                        </div>
+                        <div class="control">
+                            <button id="size-plus" class="button is-success">
+                                <span class="icon"><i class="fas fa-plus"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer has-background-light mt-6">
+        <div class="content has-text-centered">
+            <p><strong>Сервис аренды</strong></p>
+            <p>Практическое занятие 12 — Обработка событий</p>
+            <p class="is-size-7">© 2026 Учебный проект</p>
+        </div>
+    </footer>
+
+    <!-- Подключение скрипта -->
+    <script src="scripts/events-practice.js"></script>
+</body>
+</html>
