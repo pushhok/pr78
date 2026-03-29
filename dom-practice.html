@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическое 11 | DOM манипуляции</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .border-container {
+            border: 3px solid #333;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .bg-green {
+            background-color: #48c774 !important;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .red-text {
+            color: #f14668 !important;
+            font-weight: bold;
+        }
+        .highlight {
+            background-color: #ffe08a !important;
+            border: 2px solid #ffdd57;
+        }
+        .task-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar is-light" role="navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <strong>Сервис аренды</strong>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="index.html">Главная</a>
+                    <a class="navbar-item" href="contacts.html">Контакты</a>
+                    <a class="navbar-item" href="faq.html">FAQ</a>
+                    <a class="navbar-item is-active" href="dom-practice.html">Практика 11</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="section">
+        <div class="container">
+            <h1 class="title has-text-centered mb-6">Практическое занятие 11: DOM манипуляции</h1>
+
+            <section class="task-section">
+                <h2 class="title is-3">Задание №1: Генерация списка</h2>
+                <div class="box">
+                    <div id="task1-container">
+                    </div>
+                    <button id="addUserBtn" class="button is-primary mt-4">
+                        <span class="icon"><i class="fas fa-user-plus"></i></span>
+                        <span>Добавить пользователя</span>
+                    </button>
+                </div>
+                <div class="notification is-info is-light mt-4">
+                    <strong>Результат в консоли:</strong> откройте F12 → Console
+                </div>
+            </section>
+
+            <section class="task-section">
+                <h2 class="title is-3">Задание №2: Работа с селекторами</h2>
+                <div class="box">
+                    <div id="container">
+                        <p class="text">Первый параграф</p>
+                        <p class="text special">Второй параграф</p>
+                        <p class="text">Третий параграф</p>
+                        <p class="text">Четвёртый параграф</p>
+                    </div>
+                </div>
+                <div class="notification is-info is-light mt-4">
+                    <strong>Что должно произойти:</strong> второй параграф станет красным, третий — зелёным, у контейнера появится рамка
+                </div>
+            </section>
+
+            <section class="task-section">
+                <h2 class="title is-3">Задание №3: Data-атрибуты и вычисления</h2>
+                <div class="box">
+                    <div id="items-container">
+                        <div class="item" data-price="100">Товар 1</div>
+                        <div class="item active" data-price="200">Товар 2</div>
+                        <div class="item" data-price="150">Товар 3</div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="is-size-5"><strong>Суммарная стоимость:</strong> <span id="total-price">0</span> ₽</p>
+                        <p class="is-size-5"><strong>Самый дорогой товар:</strong> <span id="max-price-item">-</span></p>
+                    </div>
+                </div>
+                <div class="notification is-info is-light mt-4">
+                    <strong>Результат в консоли:</strong> откройте F12 → Console
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer has-background-light mt-6">
+        <div class="content has-text-centered">
+            <p><strong>Сервис аренды</strong></p>
+            <p>Практическое занятие 11 — DOM манипуляции</p>
+            <p class="is-size-7">© 2026 Учебный проект</p>
+        </div>
+    </footer>
+
+    <script src="scripts/dom-practice.js"></script>
+</body>
+</html>
